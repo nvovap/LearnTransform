@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LearnTransform" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8F-Ze-8dj">
+                                <state key="normal" title="Set to Centr"/>
+                                <connections>
+                                    <action selector="setToCentr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yem-NF-VCi"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="jNi-MT-eCM">
+                                <connections>
+                                    <action selector="applyTransform:" destination="BYZ-38-t0r" eventType="valueChanged" id="6KZ-d6-raA"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnj-u6-3vk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7d-XQ-EcM">
+                                <state key="normal" title="Apply Scale"/>
+                                <connections>
+                                    <action selector="applyScale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFu-tl-wMQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2H-OH-CLu">
+                                <frame key="frameInset" minX="278" minY="104" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Animation"/>
+                                <connections>
+                                    <action selector="animation" destination="BYZ-38-t0r" eventType="touchUpInside" id="pw3-7e-6Kl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="M8F-Ze-8dj" secondAttribute="trailing" id="HXx-hR-AyM"/>
+                            <constraint firstItem="M8F-Ze-8dj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="IyF-5M-3wg"/>
+                            <constraint firstItem="jNi-MT-eCM" firstAttribute="trailing" secondItem="M8F-Ze-8dj" secondAttribute="trailing" id="LJP-Vj-c70"/>
+                            <constraint firstItem="jNi-MT-eCM" firstAttribute="top" secondItem="mnj-u6-3vk" secondAttribute="bottom" constant="8" id="S3M-Xv-51z"/>
+                            <constraint firstItem="mnj-u6-3vk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XaB-eg-4Po"/>
+                            <constraint firstItem="C7d-XQ-EcM" firstAttribute="top" secondItem="M8F-Ze-8dj" secondAttribute="bottom" constant="8" id="ayw-R6-Tzv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C7d-XQ-EcM" secondAttribute="trailing" id="cmw-O8-l5U"/>
+                            <constraint firstAttribute="bottom" secondItem="jNi-MT-eCM" secondAttribute="bottom" constant="20" symbolic="YES" id="f4g-uj-dxI"/>
+                            <constraint firstItem="jNi-MT-eCM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="zcE-4s-Wdi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scaleValue" destination="mnj-u6-3vk" id="x3U-eX-5NS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
